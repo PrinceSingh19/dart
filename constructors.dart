@@ -3,6 +3,9 @@ void main() {
   final cookie = Cookie("Prinshu", 25);
   print(cookie.name);
   print(cookie.age);
+
+  final namedClass = NamedClass(name: "P", age: 21);
+  print(namedClass.name);
 }
 
 class Cookie {
@@ -10,7 +13,7 @@ class Cookie {
   int age = 24;
 
   // Constuctor is a special method that is used to initialize and set the values of the class members when they are initialized
-
+// parameterised construtor
   Cookie(this.name, this.age) {
     print(name);
     print("Cookie is baking");
@@ -23,4 +26,12 @@ class Cookie {
   bool isAdult() {
     return true;
   }
+}
+
+
+// example of named constructor
+class NamedClass {
+  String name = "Prinshu";
+  int age = 18;
+  NamedClass({required this.name, required this.age});
 }
